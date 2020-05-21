@@ -15,3 +15,48 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ header {
+    color: white;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  
+}
+ul {
+  font-size: 13px;
+  margin-top : 0;
+  margin-bottom: 10px;
+}
+body {
+  padding-top: 51px;
+}
+header .navbar-left span {
+  font-size: 20px;
+  padding-top: 10px;
+}
+ .nav-item {
+  list-style: none;
+ }
+a#text {
+  font-size: 13px;
+}
+li#glyphicon {
+    position: relative;
+    padding: 10px 15px;
+}
+a:visited {
+  color: #666;
+}
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+a:hover {
+    background-color: #000;
+    color: #337ab7;
+  }
+
+#error_explanation {
+  color: red;
+}
