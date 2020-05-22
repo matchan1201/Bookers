@@ -4,17 +4,24 @@
   	  <h2>User info</h2>
   	  <table class="table">
   	  	<tbody>
-  	  	  <tr></tr>
-  	  	  <tr>
-  	  	  	<th>name</th>
-  	  	  </tr>
-  	  	  <tr>
-  	  	  	<th>introduction</th>
-  	  	  </tr>
-  	  	</tbody>
-  	  </table>
+          <tr></tr>
+          <tr>
+            <th>name</th>
+            <th><%= @user%></th>
+          </tr>
+          <tr>
+            <th>introduction</th>
+            <th><%=  %></th>
+          </tr>
+        </tbody>
+      </table>
+
   	  <div class="row">
-  	  	<%= link_to '#', books_path, class: "btn btn-default col-xs-12" %>
+        <% if @user == current_user.id %>
+  	  	<%= link_to edit_user_path(@user) do %>
+        <span class="col-xs-12 btn btn-default glyphicon glyphicon-wrench"></span>
+        <% end %>
+        <% end %>
   	  </div>
   	  <h2>New book</h2>
         <% if @book.errors.any? %>
