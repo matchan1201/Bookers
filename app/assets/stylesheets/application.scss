@@ -39,8 +39,11 @@ header .navbar-left span {
  .nav-item {
   list-style: none;
  }
+
 a#text {
   font-size: 13px;
+  display: block;
+  float: left;
 }
 li#glyphicon {
     position: relative;
