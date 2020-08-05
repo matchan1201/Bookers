@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
         user_path(current_user.id)
     end
     def after_sign_out_path_for(resource)
+    	# flash[:notice] = "ログアウト"
         root_path
     end
 	protect_from_forgery with: :exception
