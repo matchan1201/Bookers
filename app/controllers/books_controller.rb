@@ -8,8 +8,9 @@ class BooksController < ApplicationController
 	def create
 		@books =Book.all
 		@book = Book.new(book_params)
+		binding.pry
 		@book.user_id = current_user.id
-		if @book.save
+		if @book.save!
 		   redirect_to book_path(@book.id), notice: 'You have createded user successfully.'
 	    else
 	      render :index
