@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   def index
       @users = User.all
       @book = Book.new
+      @confict = @users.reverse_order
   end
 
   private
