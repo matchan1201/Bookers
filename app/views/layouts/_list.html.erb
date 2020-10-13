@@ -38,7 +38,7 @@
           </ul>
         </div>
         <% end %>
-  	    <%= form_for(book) do |f| %>
+  	    <%= form_with model: @book, url: confilm_path do |f| %>
         <div class="field row">
           <%= f.label :title, "Title"%>
           <br>
